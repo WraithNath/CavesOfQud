@@ -1,0 +1,21 @@
+﻿<Window x:Class="WraithNath.CavesOfQud.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WraithNath.CavesOfQud.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="228.433" Width="525.482" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu x:Name="menu" Height="21" Margin="0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Grid.ColumnSpan="2">
+            <MenuItem Header="File">
+                <MenuItem Header="Settings" Command="{Binding Path=SettingsCommand}"/>
+                <Separator/>
+                <MenuItem Header="Exit" Command="{Binding Path=ExitCommand}"/>
+            </MenuItem>
+        </Menu>
+        <ListBox x:Name="listBox" Height="109" Margin="10,0,10,10" VerticalAlignment="Bottom" ItemsSource="{Binding Path=Messages}" />
+        <Button x:Name="buttonStart" Command="{Binding Path=StartCommand}" Content="Start" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="75" Height="34"/>
+        <Button x:Name="buttonStop" Command="{Binding StopCommand}" Content="Stop" HorizontalAlignment="Left" Margin="90,26,0,0" VerticalAlignment="Top" Width="75" Height="34"/>
+    </Grid>
+</Window>
